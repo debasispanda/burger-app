@@ -1,0 +1,25 @@
+<input placeholder="Search by User Name" (input)="handleChange($event)" />
+<table>
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Buns</th>
+            <th>Salad</th>
+            <th>Cheese</th>
+            <th>Cutlets</th>
+            <th>Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of orders">
+            <td>{{order.user}}</td>
+            <td>{{order.buns}}</td>
+            <td>{{order.salad}}</td>
+            <td>{{order.cheese}}</td>
+            <td>{{order.cutlets}}</td>
+            <td>{{order.totalPrice}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<div>Order Total: {{orderTotal}}</div>

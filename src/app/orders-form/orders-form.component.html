@@ -1,0 +1,29 @@
+<form [formGroup]="orderForm">
+    <div class="form-control">
+        <label>User Name</label>
+        <input formControlName="user" placeholder="User Name" />
+    </div>
+
+    <!-- <div class="form-control">
+        <input formControlName="buns" placeholder="Buns" disabled />
+    </div> -->
+
+    <div class="form-control">
+        <label>Salad ?</label>
+        <input type="radio" name="salad" value="yes" formControlName="salad" /> Yes
+        <input type="radio" name="salad" value="no" formControlName="salad" /> No
+    </div>
+
+    <div class="form-control">
+        <label>Cheese</label>
+        <input type="number" formControlName="cheese" placeholder="Cheese" />
+    </div>
+
+    <div class="form-control">
+        <label>Cutlets</label>
+        <input type="number" formControlName="cutlets" placeholder="Cutlets" />
+    </div>
+
+    <div class="total-price">Total Price: {{totalPrice}}</div>
+    <button type="button" (click)="submitOrder()" [disabled]="orderForm.invalid">Submit</button>
+</form>

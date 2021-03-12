@@ -1,0 +1,21 @@
+form {
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+    .form-control {
+        width: 100%;
+        margin-top: 15px;
+        input {
+            width: 100%;
+            padding: 8px;
+        }
+    }
+
+    .total-price {
+        margin-top: 30px;
+    }
+
+    button {
+        margin-top: 30px;
+    }
+}
